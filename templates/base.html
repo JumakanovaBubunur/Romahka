@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title%}Kinder Garten {% endblock title%}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+ <header class="header" >
+        <div class="wraper">
+           <div class="header_wrapper">
+            <div class="header_logo" >
+                <a href="/" class="header_logo-link">
+                    <img src="{% static 'images/Group 6.svg' %}" alt="logo" class="header_logo-pic">
+                </a>
+            </div>
+
+            <nav class="header_nav">
+                <ul class="header_list">
+                    <li class="header_item">
+                        <a href="{% url 'home' %}" class="header_link">main</a>
+                    </li>
+                    <li class="header_item">
+                        <a href="{% url 'about' %}" class="header_link"> about</a>
+                    </li>
+                    <li class="header_item">
+                        <a href="{% url 'condition'  %}" class="header_link"> conditions</a>
+                    </li>
+                    <li class="header_item">
+                        <a href="{% url 'registration' %}" class="header_link">admission</a>
+                    </li>
+                    <li class="header_item">
+                        <a href="{% url 'regime' %}" class="header_link">daily regime</a>
+
+                    </li>
+                    <div class="search-form">
+                        <input type="text" class="search-form_txt" placeholder="Search...">
+                        <button class="search-form_btn">
+                            <img src="" alt="image" class="search-form_image">
+                        </button>
+                    </div>
+                </ul>
+            </nav>
+           </div>
+                   </div>
+
+
+
+    </header>
+ {% block content %}
+ {% endblock content %}
+</body>
+</html>
